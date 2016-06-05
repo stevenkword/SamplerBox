@@ -12,6 +12,8 @@ Website: www.samplerbox.org
 
 This is where I put things about what I've changed.
 
+[Adafruit RGB Negative 16x2 LCD+Keypad Kit for Raspberry Pi](https://www.adafruit.com/product/1110)
+
 [Install](#install)
 ----
 
