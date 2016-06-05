@@ -18,24 +18,25 @@ AUDIO_DEVICE_ID = 0                     # change this number to use another soun
 SAMPLES_DIR = "."                       # The root directory containing the sample-sets. Example: "/media/" to look for samples on a USB stick / SD card
 USE_SERIALPORT_MIDI = False             # Set to True to enable MIDI IN via SerialPort (e.g. RaspberryPi's GPIO UART pins)
 USE_I2C_7SEGMENTDISPLAY = False         # Set to True to use a 7-segment display via I2C
+USE_ADAFRUIT_KIT = True                 # Set to True to use a Adafruit RGB Negative 16x2 LCD+Keypad Kit (https://www.adafruit.com/product/1110)
 USE_BUTTONS = False                     # Set to True to use momentary buttons (connected to RaspberryPi's GPIO pins) to change preset
 MAX_POLYPHONY = 80                      # This can be set higher, but 80 is a safe value
 
 ########################################
-# RASPBERRY PI LCD
+# ADAFRUIT DISPLAY/KEYPAD KIT
 ########################################
-
-from time import sleep
-from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
-
-# Initialize the LCD plate.  Should auto-detect correct I2C bus.  If not,
-# pass '0' for early 256 MB Model B boards or '1' for all later versions
-lcd = Adafruit_CharLCDPlate()
-
-# Clear display and show greeting, pause 1 sec
-lcd.clear()
-lcd.message("SamplerBox v2.0\nWord Instruments")
-#sleep(1)
+if USE_ADAFRUIT_KIT:
+    from time import sleep
+    from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
+    
+    # Initialize the LCD plate.  Should auto-detect correct I2C bus.  If not,
+    # pass '0' for early 256 MB Model B boards or '1' for all later versions
+    lcd = Adafruit_CharLCDPlate()
+    
+    # Clear display and show greeting, pause 1 sec
+    lcd.clear()
+    lcd.message("SamplerBox v2.0\nWord Instruments")
+    #sleep(1)
 
 #########################################
 # IMPORT
