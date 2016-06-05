@@ -35,8 +35,10 @@ if USE_ADAFRUIT_KIT:
     
     # Clear display and show greeting, pause 1 sec
     lcd.clear()
+    lcd.backlight(lcd.TEAL)
     lcd.message("SamplerBox v2.0\nWord Instruments")
-    #sleep(1)
+    sleep(1)
+    lcd.backlight(lcd.VIOLET)
 
 #########################################
 # IMPORT
