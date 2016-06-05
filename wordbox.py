@@ -21,6 +21,21 @@ USE_I2C_7SEGMENTDISPLAY = False         # Set to True to use a 7-segment display
 USE_BUTTONS = False                     # Set to True to use momentary buttons (connected to RaspberryPi's GPIO pins) to change preset
 MAX_POLYPHONY = 80                      # This can be set higher, but 80 is a safe value
 
+########################################
+# RASPBERRY PI LCD
+########################################
+
+from time import sleep
+from Adafruit_CharLCDPlate import Adafruit_CharLCDPlate
+
+# Initialize the LCD plate.  Should auto-detect correct I2C bus.  If not,
+# pass '0' for early 256 MB Model B boards or '1' for all later versions
+lcd = Adafruit_CharLCDPlate()
+
+# Clear display and show greeting, pause 1 sec
+lcd.clear()
+lcd.message("SamplerBox v2.0\nWord Instruments")
+#sleep(1)
 
 #########################################
 # IMPORT
