@@ -7,6 +7,11 @@ Website: www.samplerbox.org
 
 [![](http://gget.it/flurexml/1.jpg)](https://www.youtube.com/watch?v=yz7GZ8YOjTw)
 
+[Adafruit LCD Support](#adafruit)
+----
+
+This is where I put things about what I've changed.
+
 [Install](#install)
 ----
 
